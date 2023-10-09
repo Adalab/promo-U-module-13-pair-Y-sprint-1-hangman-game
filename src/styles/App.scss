@@ -1,11 +1,11 @@
 
 //styles to each component
 @import 'core/reset';
-@import 'components/main';
-@import 'components/dummy';
-@import 'components/footer';
-@import 'components/form';
-@import 'components/header';
-@import 'components/instructions';
-@import 'components/letters';
-@import 'components/loading';
+@import 'layouts/main';
+@import 'layouts/dummy';
+@import 'layouts/footer';
+@import 'layouts/form';
+@import 'layouts/header';
+@import 'layouts/instructions';
+@import 'layouts/letters';
+@import 'layouts/loading';
