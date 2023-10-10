@@ -10,6 +10,18 @@ import '../styles/App.scss'
 
 function App() {
 const [numberOfErrors, setNumberOfErrors]= useState(0);
+const[lastLetter,setLastLetter]= useState("");
+
+
+const handleInput = (ev)=>{
+
+ 
+  const regex = /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/;
+  if(regex.test(ev.target.value)){setLastLetter(ev.target.value)}
+  else{setLastLetter("")}
+
+  console.log(ev.target.value)
+}
 
 
 const handleClick = () =>{
@@ -66,10 +78,12 @@ const handleClick = () =>{
               type="text"
               name="last-letter"
               id="last-letter"
+              value={lastLetter}
+              onChange={handleInput}
             />
           </form>
         </section>
-        <section className="dummy error-{numberOfErrors}">
+        <section className={"dummy error-" + numberOfErrors}>
           <span className="error-13 eye"></span>
           <span className="error-12 eye"></span>
           <span className="error-11 line"></span>
